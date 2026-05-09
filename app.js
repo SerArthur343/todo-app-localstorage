@@ -95,23 +95,23 @@ function renderTasks() {
             addedInput.classList.add("done-style");
         }
 
-        const doneMarkingButton = document.createElement("button");
-        doneMarkingButton.classList.add("doneMarkingButton");
-        doneMarkingButton.textContent = "✅";
+        const toggleDoneButton = document.createElement("button");
+        toggleDoneButton.classList.add("toggleDoneButton");
+        toggleDoneButton.textContent = "✅";
 
         const deleteButton = document.createElement("button");
         deleteButton.classList.add("deleteButton");
         deleteButton.textContent = "❌";
 
         addedTask.appendChild(addedInput);
-        addedTask.appendChild(doneMarkingButton);
+        addedTask.appendChild(toggleDoneButton);
         addedTask.appendChild(deleteButton);
 
         taskList.appendChild(addedTask);
 
 
 
-        doneMarkingButton.addEventListener("click", () => {
+        toggleDoneButton.addEventListener("click", () => {
             task.completed = !task.completed;
             localStorage.setItem("tasks", JSON.stringify(tasks));
             renderTasks();
