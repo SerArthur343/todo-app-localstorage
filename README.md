@@ -34,3 +34,7 @@ All tasks are stored in **localStorage**, so data persists even after refreshing
 3. Run `index.html` in your browser
 
 No installation required.
+
+---
+
+## ![To-Do App](preview.png)
