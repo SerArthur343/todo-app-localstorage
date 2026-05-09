@@ -25,3 +25,12 @@ All tasks are stored in **localStorage**, so data persists even after refreshing
 - JavaScript (ES6)
 - LocalStorage API
 
+---
+
+## How to Run
+
+1. Download or clone the repository
+2. Open the folder
+3. Run `index.html` in your browser
+
+No installation required.
