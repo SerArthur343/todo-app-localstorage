@@ -1,20 +1,4 @@
-// PROJE PRATİĞİ 17 --- TO-DO APP V3 
-
-
-
-
-
-/*
-tasks array
-↓
-localStorage
-↓
-renderTasks()
-↓
-addTask()
-↓
-deleteTask()
-*/
+// TO-DO APP
 
 
 
@@ -23,14 +7,10 @@ deleteTask()
 const addTaskButton = document.querySelector(".addTaskButton");
 const taskList = document.querySelector(".taskList");
 const info = document.querySelector(".info");
-
-// Görevler Array'i
  
 let tasks = [];
 
 
-
-// Sayfa Yüklendiğinde Local Storage'dan Yükle
 
 window.addEventListener("load", () => {
 
@@ -44,8 +24,6 @@ window.addEventListener("load", () => {
 });
 
 
-
-// Task Ekleme
 
 addTaskButton.addEventListener("click", () => {
 
@@ -61,8 +39,6 @@ addTaskButton.addEventListener("click", () => {
 });
 
 
-
-// Enter'la Task Ekleme
 
 document.addEventListener("keydown", e => {
     if(e.key === "Enter") {
@@ -80,8 +56,6 @@ document.addEventListener("keydown", e => {
 
 
 
-// Görev Ekleme Fonksiyonu 
-
 function addTask(text) {
     
     const newTask = {
@@ -95,8 +69,6 @@ function addTask(text) {
 
 
 
-// Görev Silme Fonksiyonu 
-
 function deleteTask(index) {
 
     tasks.splice(index, 1);
@@ -106,8 +78,6 @@ function deleteTask(index) {
 }
 
 
-
-// Task'leri DOM'a Basma Fonksiyonu 
 
 function renderTasks() {
 
@@ -141,8 +111,6 @@ function renderTasks() {
 
 
 
-        // Tamamlandı Olarak İşaretleme
-
         doneMarkingButton.addEventListener("click", () => {
             task.completed = !task.completed;
             localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -151,15 +119,11 @@ function renderTasks() {
 
 
 
-        // Task Silme 
-
         deleteButton.addEventListener("click", () => {
             deleteTask(index);
         });
 
 
-
-        // Input Değiştirme 
 
         addedInput.addEventListener("change", () => {
             task.text = addedInput.value;
@@ -167,8 +131,8 @@ function renderTasks() {
         });
     });
 
-    // Bilgilendirme Mesaj(lar)ı
 
+ 
     info.textContent = 
         tasks.length >= 8
             ? "You can't add more than 8 tasks!"
